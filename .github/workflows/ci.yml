@@ -1,0 +1,16 @@
+name: Release
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  release:
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: npx semantic-release
+    permissions:
+      contents: write
