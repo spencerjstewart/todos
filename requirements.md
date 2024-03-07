@@ -12,7 +12,7 @@
 [X] It should have a function to display todos
 
 ### Version 3
-[] It should hold objects that represent a todo with `todoText` and 
+[X] It should hold objects that represent a todo with `todoText` and 
 `completed` in the todos variable.
 [] The add function should add objects to todos.
 [] The edit function should edit objects within todos.

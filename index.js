@@ -4,8 +4,11 @@ const displayTodos = () => {
   console.log(todos)
 }
 
-const add = (todo) => {
-  todos.push(todo)
+const add = (todoText) => {
+  todos.push({
+    todoText,
+    completed: false
+  })
   displayTodos()
 }
 
