@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/spencerjstewart/practical-javascript/compare/v1.0.0...v1.1.0) (2024-03-07)
+
+
+### Features
+
+* create functions for CRUD operations ([#11](https://github.com/spencerjstewart/practical-javascript/issues/11)) ([c504c3c](https://github.com/spencerjstewart/practical-javascript/commit/c504c3cfb2750905faa4a6fc22afea2d738b86a5))
+
 # 1.0.0 (2024-03-06)
 
 
