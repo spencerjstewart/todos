@@ -21,3 +21,8 @@ const remove = (index) => {
   todos.splice(index, 1)
   displayTodos()
 }
+
+const toggle = (index) => {
+  todos[index].completed = !completed
+  displayTodos()
+}
