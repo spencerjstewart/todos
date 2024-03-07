@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/spencerjstewart/practical-javascript/compare/v1.2.0...v1.2.1) (2024-03-07)
+
+
+### Bug Fixes
+
+* properly remove 1 item when using the remove function ([#13](https://github.com/spencerjstewart/practical-javascript/issues/13)) ([1d0bf6a](https://github.com/spencerjstewart/practical-javascript/commit/1d0bf6a09b315c46e06384573aa413cf3fc83082))
+
 # [1.2.0](https://github.com/spencerjstewart/practical-javascript/compare/v1.1.0...v1.2.0) (2024-03-07)
 
 
