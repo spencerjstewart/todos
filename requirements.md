@@ -9,4 +9,4 @@
 [X] It should have a function to add a todo
 [X] It should have a function to edit a todo
 [X] It should have a function to remove a todo
-[] It should have a function to display todos
+[X] It should have a function to display todos

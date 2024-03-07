@@ -6,4 +6,4 @@ const edit = (index, todo) => todos[index] = todo
 
 const remove = (index) => todos.splice(index, index + 1)
 
-console.log(todos)
+const display = () => console.log(todos)
