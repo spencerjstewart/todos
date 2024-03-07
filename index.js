@@ -1,9 +1,20 @@
 const todos = []
 
-const add = todo => todos.push(todo)
+const displayTodos = () => {
+  console.log(todos)
+}
 
-const edit = (index, todo) => todos[index] = todo
+const add = (todo) => {
+  todos.push(todo)
+  displayTodos()
+}
 
-const remove = (index) => todos.splice(index, index + 1)
+const edit = (index, todo) => {
+  todos[index] = todo
+  displayTodos()
+}
 
-const display = () => console.log(todos)
+const remove = (index) => {
+  todos.splice(index, index + 1)
+  displayTodos()
+}
