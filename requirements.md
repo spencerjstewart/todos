@@ -10,3 +10,10 @@
 [X] It should have a function to edit a todo
 [X] It should have a function to remove a todo
 [X] It should have a function to display todos
+
+### Version 3
+[X] It should hold objects that represent a todo with `todoText` and 
+`completed` in the todos variable.
+[X] The add function should add objects to todos.
+[X] The edit function should edit objects within todos.
+[X] It should have a function to toggle the completed property on todo objects.
