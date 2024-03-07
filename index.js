@@ -1,31 +1,35 @@
-const todos = []
+class TodoList {
+  constructor() {
+    this.todos = []
+  }
 
-const displayTodos = () => {
-  console.log(todos)
-}
+  displayTodos = () => {
+    console.log(this.todos)
+  }
 
-const add = (todoText) => {
-  todos.push({
-    todoText, completed: false
-  })
-  displayTodos()
-}
+  add = (todoText) => {
+    this.todos.push({
+      todoText, completed: false
+    })
+    this.displayTodos()
+  }
 
-const edit = (index, todoText) => {
-  todos[index].todoText = todoText
-  displayTodos()
-}
+  edit = (index, todoText) => {
+    this.todos[index].todoText = todoText
+    this.displayTodos()
+  }
 
-const remove = (index) => {
-  todos.splice(index, 1)
-  displayTodos()
-}
+  remove = (index) => {
+    this.todos.splice(index, 1)
+    this.displayTodos()
+  }
 
-const toggle = (index) => {
-  todos[index].completed = !completed
-  displayTodos()
+  toggle = (index) => {
+    this.todos[index].completed = !completed
+    this.displayTodos()
+  }
 }
 
 module.exports = {
-  displayTodos, add, edit, remove, toggle
+  TodoList
 }
