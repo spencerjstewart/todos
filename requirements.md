@@ -14,6 +14,6 @@
 ### Version 3
 [X] It should hold objects that represent a todo with `todoText` and 
 `completed` in the todos variable.
-[] The add function should add objects to todos.
-[] The edit function should edit objects within todos.
+[X] The add function should add objects to todos.
+[X] The edit function should edit objects within todos.
 [] It should have a function to toggle the completed property on todo objects.

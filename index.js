@@ -12,8 +12,8 @@ const add = (todoText) => {
   displayTodos()
 }
 
-const edit = (index, todo) => {
-  todos[index] = todo
+const edit = (index, todoText) => {
+  todos[index].todoText = todoText
   displayTodos()
 }
 
