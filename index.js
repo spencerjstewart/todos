@@ -15,6 +15,6 @@ const edit = (index, todo) => {
 }
 
 const remove = (index) => {
-  todos.splice(index, index + 1)
+  todos.splice(index, 1)
   displayTodos()
 }
