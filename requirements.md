@@ -6,7 +6,7 @@
 [X] It should have a way to remove todos
 
 ### Version 2
-[] It should have a function to add a todo
-[] It should have a function to edit a todo
+[X] It should have a function to add a todo
+[X] It should have a function to edit a todo
 [] It should have a function to remove a todo
 [] It should have a function to display todos
