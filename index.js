@@ -29,7 +29,7 @@ class TodoList {
   }
 
   toggle = (index) => {
-    this.todos[index].completed = !completed
+    this.todos[index].completed = !this.todos[index].completed
     this.displayTodos()
   }
 }
