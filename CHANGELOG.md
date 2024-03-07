@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/spencerjstewart/practical-javascript/compare/v1.2.1...v1.3.0) (2024-03-07)
+
+
+### Features
+
+* rewrite functions to support manipulating todo objects ([#14](https://github.com/spencerjstewart/practical-javascript/issues/14)) ([b8e2240](https://github.com/spencerjstewart/practical-javascript/commit/b8e2240be5c4d1662227d7a9156cf832f3e948cd))
+
 ## [1.2.1](https://github.com/spencerjstewart/practical-javascript/compare/v1.2.0...v1.2.1) (2024-03-07)
 
 
