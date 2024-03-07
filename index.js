@@ -6,8 +6,7 @@ const displayTodos = () => {
 
 const add = (todoText) => {
   todos.push({
-    todoText,
-    completed: false
+    todoText, completed: false
   })
   displayTodos()
 }
@@ -25,4 +24,8 @@ const remove = (index) => {
 const toggle = (index) => {
   todos[index].completed = !completed
   displayTodos()
+}
+
+module.exports = {
+  displayTodos, add, edit, remove, toggle
 }
