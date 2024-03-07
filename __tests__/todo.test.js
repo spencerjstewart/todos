@@ -12,7 +12,7 @@ const initTodos = () => {
 }
 
 describe('Todo App', () => {
-  describe('The function ', () => {
+  describe('The function', () => {
     let todoList;
 
     beforeEach(() => {
@@ -22,6 +22,13 @@ describe('Todo App', () => {
     test('add should add objects to todos.', () => {
       todoList.add('Clean emails')
       expect(todoList.todos[3].todoText).toBe('Clean emails')
+    })
+
+    test('edit should accept an index and some todo text and edit the todos' + ' list in-place', () => {
+      todoList.edit(1, 'edited todo')
+      expect(todoList.todos[0].todoText).toBe('Drink water')
+      expect(todoList.todos[1].todoText).toBe('edited todo')
+      expect(todoList.todos[2].todoText).toBe('Learn JavaScript')
     })
   })
 })
