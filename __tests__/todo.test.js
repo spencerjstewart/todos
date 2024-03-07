@@ -36,5 +36,12 @@ describe('Todo App', () => {
       expect(todoList.todos[0].todoText).toBe('Drink water')
       expect(todoList.todos[1].todoText).toBe('Learn JavaScript')
     })
+
+    test('toggle should flip the completed property on a todo', () => {
+      todoList.toggle(0)
+      expect(todoList.todos[0].completed).toBe(true)
+      todoList.toggle(0)
+      expect(todoList.todos[0].completed).toBe(false)
+    })
   })
 })
