@@ -1,6 +1,10 @@
 class TodoList {
-  constructor() {
-    this.todos = []
+  constructor(todos = []) {
+    if (Array.isArray(todos) && todos.length > 0 && todos.every(todo => typeof todo === 'object' && 'todoText' in todo && 'completed' in todo)) {
+      this.todos = todos;
+    } else {
+      this.todos = [];
+    }
   }
 
   displayTodos = () => {
