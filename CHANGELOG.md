@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/spencerjstewart/practical-javascript/compare/v1.1.0...v1.2.0) (2024-03-07)
+
+
+### Features
+
+* display todos after updating todos ([#12](https://github.com/spencerjstewart/practical-javascript/issues/12)) ([e46ef16](https://github.com/spencerjstewart/practical-javascript/commit/e46ef16f93ccc17a1a6a23d80526c141eabb2d14))
+
 # [1.1.0](https://github.com/spencerjstewart/practical-javascript/compare/v1.0.0...v1.1.0) (2024-03-07)
 
 
