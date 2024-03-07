@@ -32,6 +32,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
+      - name: Run tests
+        run: npm test
+
       - name: Run semantic release
         run: npx semantic-release
         env:
