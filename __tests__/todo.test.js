@@ -30,5 +30,11 @@ describe('Todo App', () => {
       expect(todoList.todos[1].todoText).toBe('edited todo')
       expect(todoList.todos[2].todoText).toBe('Learn JavaScript')
     })
+
+    test('remove should remove a todo in-place', () => {
+      todoList.remove(1)
+      expect(todoList.todos[0].todoText).toBe('Drink water')
+      expect(todoList.todos[1].todoText).toBe('Learn JavaScript')
+    })
   })
 })
