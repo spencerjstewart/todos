@@ -42,6 +42,30 @@ class TodoList {
     this.todos[index].completed = !this.todos[index].completed;
     this.displayTodos();
   };
+
+  toggleAll = () => {
+    let numTrue = 0;
+
+    this.todos.forEach((todo) => {
+      if (todo.completed) {
+        numTrue += 1;
+      }
+    });
+
+    if (numTrue > 0 && numTrue !== this.todos.length) {
+      this.todos.forEach((todo) => {
+        todo.completed = true;
+      });
+    }
+
+    if (numTrue === this.todos.length) {
+      this.todos.forEach((todo) => {
+        todo.completed = false;
+      });
+    }
+
+    this.displayTodos();
+  };
 }
 
 module.exports = {
