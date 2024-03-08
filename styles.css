@@ -7,3 +7,37 @@
 
     font-size: 16px;
 }
+
+body {
+    background-color: var(--color-main);
+    color: var(--color-dark-shade);
+    font-family: 'Inter', sans-serif;
+}
+
+.card {
+    margin: 4rem auto;
+    max-width: 24rem;
+    min-width: 18rem;
+    border: 0.1rem solid var(--color-dark-shade);
+    box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
+}
+
+.todo-card__header {
+    background-color: var(--color-light-shade);
+    color: var(--color-main);
+    padding-top: 1rem;
+    border-bottom: 0.1rem solid var(--color-dark-shade);
+    text-align: center;
+}
+
+.todo-card__header h1 {
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    text-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.1);
+}
+
+.display-todos-btn {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
