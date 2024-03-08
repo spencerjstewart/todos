@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/spencerjstewart/practical-javascript/compare/v1.3.0...v1.4.0) (2024-03-08)
+
+
+### Features
+
+* change displayTodos to output todos in a user-friendly way ([#19](https://github.com/spencerjstewart/practical-javascript/issues/19)) ([5755d97](https://github.com/spencerjstewart/practical-javascript/commit/5755d9714ee6efe6a49963eacf842ac4f7079605))
+
 # [1.3.0](https://github.com/spencerjstewart/practical-javascript/compare/v1.2.1...v1.3.0) (2024-03-07)
 
 
