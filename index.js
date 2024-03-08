@@ -15,9 +15,9 @@ class TodoList {
   }
 
   displayTodos = () => {
-    for (const todo of this.todos) {
+    this.todos.forEach((todo) => {
       console.log(`${todo.completed ? "[X]" : "[]"} ${todo.todoText}`);
-    }
+    });
   };
 
   add = (todoText) => {
