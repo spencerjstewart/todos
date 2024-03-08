@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/spencerjstewart/practical-javascript/compare/v1.4.0...v1.5.0) (2024-03-08)
+
+
+### Features
+
+* implement toggleAll function ([#21](https://github.com/spencerjstewart/practical-javascript/issues/21)) ([f71007c](https://github.com/spencerjstewart/practical-javascript/commit/f71007c9ad39a9e6b4f33039993580555d0527c8))
+
 # [1.4.0](https://github.com/spencerjstewart/practical-javascript/compare/v1.3.0...v1.4.0) (2024-03-08)
 
 
