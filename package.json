@@ -32,5 +32,9 @@
     "prettier": "^3.2.5",
     "prettier-config-airbnb": "^1.0.0",
     "semantic-release": "^23.0.2"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "normalize.css": "^8.0.1"
   }
 }
