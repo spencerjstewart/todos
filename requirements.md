@@ -16,4 +16,10 @@
 `completed` in the todos variable.
 [X] The add function should add objects to todos.
 [X] The edit function should edit objects within todos.
+
+### Version 4
 [X] It should have a function to toggle the completed property on todo objects.
+
+### Version 5
+[] displayTodos should show the todoText property.
+[] displayTodos should show the completed property.
