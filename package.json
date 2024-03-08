@@ -11,6 +11,7 @@
   "author": "Spencer Stewart",
   "license": "MIT",
   "devDependencies": {
+    "@babel/eslint-parser": "^7.23.10",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^11.1.0",
     "@semantic-release/git": "^10.0.1",
