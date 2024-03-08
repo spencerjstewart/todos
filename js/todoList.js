@@ -14,12 +14,6 @@ class TodoList {
     }
   }
 
-  displayTodos = () => {
-    this.todos.forEach((todo) => {
-      console.log(`${todo.completed ? "[X]" : "[]"} ${todo.todoText}`);
-    });
-  };
-
   add = (todoText) => {
     this.todos.push({
       todoText,
