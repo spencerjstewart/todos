@@ -15,9 +15,9 @@ class TodoList {
   }
 
   displayTodos = () => {
-    for (const todo of this.todos) {
+    this.todos.forEach((todo) => {
       console.log(`${todo.completed ? "[X]" : "[]"} ${todo.todoText}`);
-    }
+    });
   };
 
   add = (todoText) => {
@@ -40,6 +40,30 @@ class TodoList {
 
   toggle = (index) => {
     this.todos[index].completed = !this.todos[index].completed;
+    this.displayTodos();
+  };
+
+  toggleAll = () => {
+    let numTrue = 0;
+
+    this.todos.forEach((todo) => {
+      if (todo.completed) {
+        numTrue += 1;
+      }
+    });
+
+    if (numTrue > 0 && numTrue !== this.todos.length) {
+      this.todos.forEach((todo) => {
+        todo.completed = true;
+      });
+    }
+
+    if (numTrue === this.todos.length) {
+      this.todos.forEach((todo) => {
+        todo.completed = false;
+      });
+    }
+
     this.displayTodos();
   };
 }
