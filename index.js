@@ -8,7 +8,9 @@ class TodoList {
   }
 
   displayTodos = () => {
-    console.log(this.todos)
+    for (const todo of this.todos) {
+      console.log(`${todo.completed ? '[X]' : '[]'} ${todo.todoText}`)
+    }
   }
 
   add = (todoText) => {

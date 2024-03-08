@@ -18,7 +18,8 @@ describe('Todo App', () => {
 
     beforeEach(() => {
       todoList = initTodos()
-      consoleSpy = jest.spyOn(console, 'log').mockImplementation(() => {})
+      consoleSpy = jest.spyOn(console, 'log').mockImplementation(() => {
+      })
     })
 
     afterEach(() => {
