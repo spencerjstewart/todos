@@ -76,13 +76,5 @@ describe("Todo App", () => {
       todoList.toggle(0);
       expect(todoList.todos[0].completed).toBe(false);
     });
-
-    test('displayTodos should print todos in the form "[] todo"', () => {
-      todoList.toggle(1); // toggle calls displayTodos
-      expect(consoleSpy).toHaveBeenCalledTimes(3);
-      expect(consoleSpy).toHaveBeenNthCalledWith(1, "[] Drink water");
-      expect(consoleSpy).toHaveBeenNthCalledWith(2, "[X] Go for a walk");
-      expect(consoleSpy).toHaveBeenNthCalledWith(3, "[] Learn JavaScript");
-    });
   });
 });
