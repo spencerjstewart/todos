@@ -6,7 +6,8 @@
   "scripts": {
     "start-dev": "live-server",
     "release": "semantic-release",
-    "test": "jest"
+    "test": "jest",
+    "build": "webpack"
   },
   "author": "Spencer Stewart",
   "license": "MIT",
