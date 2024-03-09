@@ -11,6 +11,7 @@ class TodoListUI {
     this.displayTodosBtn.addEventListener("click", () =>
       this.handleDisplayTodosBtnClick(),
     );
+    this.displayTodos();
   };
 
   handleDisplayTodosBtnClick = () => {
