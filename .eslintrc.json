@@ -2,6 +2,7 @@
   "env": {
     "es6": true,
     "node": true,
+    "browser": true,
     "jest/globals": true
   },
   "extends": [
@@ -9,14 +10,9 @@
     "plugin:prettier/recommended",
     "plugin:jest/recommended"
   ],
-  "plugins": [
-    "prettier",
-    "jest"
-  ],
+  "plugins": ["prettier", "jest"],
   "rules": {
-    "prettier/prettier": [
-      "error"
-    ],
+    "prettier/prettier": ["error"],
     "no-param-reassign": "off"
   },
   "parser": "@babel/eslint-parser",

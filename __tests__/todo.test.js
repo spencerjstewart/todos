@@ -1,4 +1,4 @@
-const { TodoList } = require("../index");
+const { TodoList } = require("../js");
 require("jest");
 
 const initTodos = () =>

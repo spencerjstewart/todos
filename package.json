@@ -2,7 +2,7 @@
   "name": "practical-javascript",
   "version": "1.0.0",
   "description": "Todo List App for the Practical JavaScript course on Watch and Code",
-  "main": "index.js",
+  "main": "js/index.js",
   "scripts": {
     "start-dev": "live-server",
     "release": "semantic-release",

@@ -32,11 +32,11 @@
 ### Version 6
 
 - It should have a function for toggling all todos.
-    - If 0 < numTrue < todos.length, change everything to true.
-    - If everything is true, change everything to false.
+  - If 0 < numTrue < todos.length, change everything to true.
+  - If everything is true, change everything to false.
 
 ### Version 7
 
 - It should have a displayTodos button.
-    - The button should run the displayTodos function.
+  - The button should run the displayTodos function.
 - The todos should be displayed on the page.
