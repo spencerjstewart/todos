@@ -1,5 +1,6 @@
 class TodoList {
   constructor(todos = []) {
+    this.observers = [];
     if (
       Array.isArray(todos) &&
       todos.length > 0 &&
@@ -14,27 +15,37 @@ class TodoList {
     }
   }
 
+  subscribe = (observerFunction) => {
+    this.observers.push(observerFunction);
+  };
+
+  notifyObservers = () => {
+    this.observers.forEach((observer) => {
+      observer();
+    });
+  };
+
   add = (todoText) => {
     this.todos.push({
       todoText,
       completed: false,
     });
-    this.displayTodos();
+    this.notifyObservers();
   };
 
   edit = (index, todoText) => {
     this.todos[index].todoText = todoText;
-    this.displayTodos();
+    this.notifyObservers();
   };
 
   remove = (index) => {
     this.todos.splice(index, 1);
-    this.displayTodos();
+    this.notifyObservers();
   };
 
   toggle = (index) => {
     this.todos[index].completed = !this.todos[index].completed;
-    this.displayTodos();
+    this.notifyObservers();
   };
 
   toggleAll = () => {
@@ -58,7 +69,7 @@ class TodoList {
       });
     }
 
-    this.displayTodos();
+    this.notifyObservers();
   };
 }
 

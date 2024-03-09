@@ -7,9 +7,11 @@ class TodoListUI {
   }
 
   init = () => {
+    this.todoList.subscribe(this.displayTodos);
     this.displayTodosBtn.addEventListener("click", () =>
       this.handleDisplayTodosBtnClick(),
     );
+    this.displayTodos();
   };
 
   handleDisplayTodosBtnClick = () => {

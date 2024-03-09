@@ -1,4 +1,5 @@
-const { TodoList } = require("../js");
+const { TodoList } = require("../js/todoList");
+const { TodoListUI } = require("../js/todoListUI");
 require("jest");
 
 const initTodos = () =>
@@ -20,15 +21,31 @@ const initTodos = () =>
 describe("Todo App", () => {
   describe("The function", () => {
     let todoList;
-    let consoleSpy;
+    let ui;
 
     beforeEach(() => {
+      document.body.innerHTML = `
+        <div class="container">
+          <section class="todo-card card">
+            <header class="todo-card__header card-header">
+              <h1>todos</h1>
+            </header>
+            <article class="todo-card__body card-body">
+              <button class="display-todos-btn btn btn-success">
+                Display Todos
+              </button>
+              <ul class="todo-list list-group list-group-flush"></ul>
+            </article>
+          </section>
+        </div>
+      `;
       todoList = initTodos();
-      consoleSpy = jest.spyOn(console, "log").mockImplementation(() => {});
+      ui = new TodoListUI(todoList);
+      ui.init();
     });
 
     afterEach(() => {
-      consoleSpy.mockRestore();
+      document.body.innerHTML = "";
     });
 
     test("add should add objects to todos.", () => {
@@ -58,14 +75,6 @@ describe("Todo App", () => {
       expect(todoList.todos[0].completed).toBe(true);
       todoList.toggle(0);
       expect(todoList.todos[0].completed).toBe(false);
-    });
-
-    test('displayTodos should print todos in the form "[] todo"', () => {
-      todoList.toggle(1); // toggle calls displayTodos
-      expect(consoleSpy).toHaveBeenCalledTimes(3);
-      expect(consoleSpy).toHaveBeenNthCalledWith(1, "[] Drink water");
-      expect(consoleSpy).toHaveBeenNthCalledWith(2, "[X] Go for a walk");
-      expect(consoleSpy).toHaveBeenNthCalledWith(3, "[] Learn JavaScript");
     });
   });
 });
