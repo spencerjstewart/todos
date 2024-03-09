@@ -1,3 +1,21 @@
+# [2.0.0](https://github.com/spencerjstewart/practical-javascript/compare/v1.5.0...v2.0.0) (2024-03-09)
+
+
+### Features
+
+* deprecate displayTodos that used the console and move to the browser and various linting updates ([#24](https://github.com/spencerjstewart/practical-javascript/issues/24)) ([cbea554](https://github.com/spencerjstewart/practical-javascript/commit/cbea55477e06a8d9f3d54eb9c0503b5b1ff5c771))
+
+
+### BREAKING CHANGES
+
+* we have moved away from the console and will be using the web page
+
+* chore: configure prettier to add a linebreak at the end of javascript files
+
+* chore: configure .gitattributes to normalize line endings to LF for all text files
+
+* chore: run prettier on entire project
+
 # [1.5.0](https://github.com/spencerjstewart/practical-javascript/compare/v1.4.0...v1.5.0) (2024-03-08)
 
 
