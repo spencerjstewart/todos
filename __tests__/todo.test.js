@@ -1,4 +1,5 @@
-const { TodoList } = require("../js");
+const { TodoList } = require("../js/todoList");
+const { TodoListUI } = require("../js/todoListUI");
 require("jest");
 
 const initTodos = () =>
@@ -20,15 +21,31 @@ const initTodos = () =>
 describe("Todo App", () => {
   describe("The function", () => {
     let todoList;
-    let consoleSpy;
+    let ui;
 
     beforeEach(() => {
+      document.body.innerHTML = `
+        <div class="container">
+          <section class="todo-card card">
+            <header class="todo-card__header card-header">
+              <h1>todos</h1>
+            </header>
+            <article class="todo-card__body card-body">
+              <button class="display-todos-btn btn btn-success">
+                Display Todos
+              </button>
+              <ul class="todo-list list-group list-group-flush"></ul>
+            </article>
+          </section>
+        </div>
+      `;
       todoList = initTodos();
-      consoleSpy = jest.spyOn(console, "log").mockImplementation(() => {});
+      ui = new TodoListUI(todoList);
+      ui.init();
     });
 
     afterEach(() => {
-      consoleSpy.mockRestore();
+      document.body.innerHTML = "";
     });
 
     test("add should add objects to todos.", () => {
