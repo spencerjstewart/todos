@@ -3,7 +3,7 @@ class TodoListUI {
   constructor(todoList) {
     this.todoList = todoList;
     this.displayTodosBtn = document.querySelector(".display-todos-btn");
-    this.todoListEl = document.querySelector(".todo-list");
+    this.todoListUl = document.querySelector(".todo-list");
   }
 
   init = () => {
@@ -19,23 +19,23 @@ class TodoListUI {
   };
 
   displayTodos = () => {
-    this.todoListEl.innerHTML = "";
+    this.todoListUl.innerHTML = "";
     this.todoList.todos.forEach((todo) => {
-      const todoListItem = document.createElement("li");
-      const todoTextEl = document.createElement("span");
-      todoListItem.classList.add("list-group-item");
-      const icon = document.createElement("i");
+      const todoListItemLi = document.createElement("li");
+      const todoTextSpan = document.createElement("span");
+      todoListItemLi.classList.add("list-group-item");
+      const iconI = document.createElement("i");
       if (todo.completed) {
-        icon.classList.add("fa-solid", "fa-check-circle");
-        todoTextEl.style.textDecoration = "line-through";
+        iconI.classList.add("fa-solid", "fa-check-circle");
+        todoTextSpan.style.textDecoration = "line-through";
       } else {
-        icon.classList.add("fa-regular", "fa-circle");
+        iconI.classList.add("fa-regular", "fa-circle");
       }
-      todoTextEl.textContent = todo.todoText;
-      todoListItem.appendChild(icon);
-      todoListItem.appendChild(document.createTextNode("\u00A0"));
-      todoListItem.appendChild(todoTextEl);
-      this.todoListEl.appendChild(todoListItem);
+      todoTextSpan.textContent = todo.todoText;
+      todoListItemLi.appendChild(iconI);
+      todoListItemLi.appendChild(document.createTextNode("\u00A0"));
+      todoListItemLi.appendChild(todoTextSpan);
+      this.todoListUl.appendChild(todoListItemLi);
     });
   };
 }
