@@ -3,19 +3,35 @@ class TodoListUI {
   constructor(todoList) {
     this.todoList = todoList;
     this.displayTodosBtn = document.querySelector(".display-todos-btn");
+    this.todoInput = document.querySelector(".todo-input");
     this.todoListUl = document.querySelector(".todo-list");
   }
 
   init = () => {
+    // setup observers
     this.todoList.subscribe(this.displayTodos);
+
+    // setup event listeners
     this.displayTodosBtn.addEventListener("click", () =>
       this.handleDisplayTodosBtnClick(),
     );
+    this.todoInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        this.handleAddTodo();
+      }
+    });
+
+    // display todolist
     this.displayTodos();
   };
 
   handleDisplayTodosBtnClick = () => {
     this.displayTodos();
+  };
+
+  handleAddTodo = () => {
+    this.todoList.add(this.todoInput.value);
+    this.todoInput.value = "";
   };
 
   displayTodos = () => {
