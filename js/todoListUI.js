@@ -22,8 +22,19 @@ class TodoListUI {
     this.todoListEl.innerHTML = "";
     this.todoList.todos.forEach((todo) => {
       const todoListItem = document.createElement("li");
+      const todoTextEl = document.createElement("span");
       todoListItem.classList.add("list-group-item");
-      todoListItem.textContent = `${todo.completed ? "[X]" : "[ ]"} ${todo.todoText}`;
+      const icon = document.createElement("i");
+      if (todo.completed) {
+        icon.classList.add("fa-solid", "fa-check-circle");
+        todoTextEl.style.textDecoration = "line-through";
+      } else {
+        icon.classList.add("fa-regular", "fa-circle");
+      }
+      todoTextEl.textContent = todo.todoText;
+      todoListItem.appendChild(icon);
+      todoListItem.appendChild(document.createTextNode("\u00A0"));
+      todoListItem.appendChild(todoTextEl);
       this.todoListEl.appendChild(todoListItem);
     });
   };
