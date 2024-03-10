@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/spencerjstewart/practical-javascript/compare/v2.0.0...v2.1.0) (2024-03-10)
+
+
+### Features
+
+* configured webpack-dev-server and added styling to indicate completion ([#26](https://github.com/spencerjstewart/practical-javascript/issues/26)) ([6943fd8](https://github.com/spencerjstewart/practical-javascript/commit/6943fd8f37feaaa0a8e156b7da2971a859587e21))
+
 # [2.0.0](https://github.com/spencerjstewart/practical-javascript/compare/v1.5.0...v2.0.0) (2024-03-09)
 
 
