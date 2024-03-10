@@ -40,3 +40,11 @@
 - It should have a displayTodos button.
   - The button should run the displayTodos function.
 - The todos should be displayed on the page.
+
+### Version 8 
+ 
+- It should have a way to add a todo.
+- It should have a way to edit a todo.
+- It should have a way to remove a todo.
+- It should have a way to toggle a todo.
+- It should have a way to toggle all todos.
