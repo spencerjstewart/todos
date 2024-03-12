@@ -1,3 +1,16 @@
+# [2.2.0](https://github.com/spencerjstewart/practical-javascript/compare/v2.1.0...v2.2.0) (2024-03-12)
+
+
+### Bug Fixes
+
+* properly import css and font-awesome ([#31](https://github.com/spencerjstewart/practical-javascript/issues/31)) ([3cf2c48](https://github.com/spencerjstewart/practical-javascript/commit/3cf2c48594607925d63f759da20ee805aeaf948d))
+* update test HTML to be compatible with latest changes ([#32](https://github.com/spencerjstewart/practical-javascript/issues/32)) ([9b71618](https://github.com/spencerjstewart/practical-javascript/commit/9b7161882efdc5720b4cfbb1de82bd060b86f920))
+
+
+### Features
+
+* create input field for adding todos ([#27](https://github.com/spencerjstewart/practical-javascript/issues/27)) ([982bbcf](https://github.com/spencerjstewart/practical-javascript/commit/982bbcf428c1c26f09a48f25d3c980b967093c8e))
+
 # [2.1.0](https://github.com/spencerjstewart/practical-javascript/compare/v2.0.0...v2.1.0) (2024-03-10)
 
 
