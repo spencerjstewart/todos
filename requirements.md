@@ -48,3 +48,9 @@
 - It should have a way to remove a todo.
 - It should have a way to toggle a todo.
 - It should have a way to toggle all todos.
+
+### Version 9
+
+- There should be an li for each todo.
+- Each li should show the todoText property.
+- Each li should show the completed property.
