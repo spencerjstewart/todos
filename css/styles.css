@@ -38,11 +38,28 @@ body {
 }
 
 .todo-input {
-    margin: 1rem auto 0;
-    width: 75%;
+  margin: 1rem auto 0;
+  width: 75%;
 }
 
 .display-todos-btn {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.todo-item__edit-icon {
+  margin-left: auto;
+  transition: transform 0.2s ease-in-out;
+}
+
+.todo-item__edit-icon:hover {
+  transform: scale(1.2);
+  cursor: pointer;
 }
