@@ -7,6 +7,60 @@ class TodoListUI {
     this.todoListUl = document.querySelector(".todo-list");
   }
 
+  handleDisplayTodosBtnClick = () => {
+    this.displayTodos();
+  };
+
+  handleAddTodo = () => {
+    this.todoList.add(this.todoInput.value);
+    this.todoInput.value = "";
+  };
+
+  handleEditTodoIconClick = (e) => {
+    const todoTextSpan = e.target
+      .closest(".todo-item")
+      .querySelector(".todo-item__text");
+    todoTextSpan.contentEditable = true;
+    todoTextSpan.focus();
+  };
+
+  displayTodos = () => {
+    this.todoListUl.innerHTML = "";
+    this.todoList.todos.forEach((todo) => {
+      // create the li
+      const todoListItemLi = document.createElement("li");
+      todoListItemLi.classList.add("todo-item", "list-group-item");
+
+      // create the completed icon
+      const completedIconI = document.createElement("i");
+      completedIconI.classList.add("todo-item__completed-icon", "fa");
+      completedIconI.classList.add(
+        "fa",
+        todo.completed ? "fa-check-circle" : "fa-circle",
+      );
+      todoListItemLi.appendChild(completedIconI);
+
+      // add a space
+      todoListItemLi.appendChild(document.createTextNode("\u00A0"));
+
+      // create the todo text
+      const todoTextSpan = document.createElement("span");
+      todoTextSpan.classList.add("todo-item__text");
+      todoTextSpan.style.textDecoration = todo.completed
+        ? "line-through"
+        : "none";
+      todoTextSpan.textContent = todo.todoText;
+      todoListItemLi.appendChild(todoTextSpan);
+
+      // create the edit icon
+      const editIconI = document.createElement("i");
+      editIconI.classList.add("todo-item__edit-icon", "fa-solid", "fa-pen");
+      todoListItemLi.appendChild(editIconI);
+
+      this.todoListUl.appendChild(todoListItemLi);
+    });
+  };
+
   init = () => {
     // setup observers
     this.todoList.subscribe(this.displayTodos);
@@ -20,39 +74,24 @@ class TodoListUI {
         this.handleAddTodo();
       }
     });
+    this.todoListUl.addEventListener("click", (e) => {
+      if (e.target.classList.contains("todo-item__edit-icon")) {
+        e.stopPropagation();
+        this.handleEditTodoIconClick(e);
+      }
+    });
+    this.todoListUl.addEventListener("blur", (e) => {
+      if (e.target.classList.contains("todo-item__text")) {
+        e.target.contentEditable = false;
+        this.todoList.edit(
+          e.target.closest(".todo-item").dataset.index,
+          e.target.textContent,
+        );
+      }
+    });
 
     // display todolist
     this.displayTodos();
-  };
-
-  handleDisplayTodosBtnClick = () => {
-    this.displayTodos();
-  };
-
-  handleAddTodo = () => {
-    this.todoList.add(this.todoInput.value);
-    this.todoInput.value = "";
-  };
-
-  displayTodos = () => {
-    this.todoListUl.innerHTML = "";
-    this.todoList.todos.forEach((todo) => {
-      const todoListItemLi = document.createElement("li");
-      const todoTextSpan = document.createElement("span");
-      todoListItemLi.classList.add("list-group-item");
-      const iconI = document.createElement("i");
-      if (todo.completed) {
-        iconI.classList.add("fa-solid", "fa-check-circle");
-        todoTextSpan.style.textDecoration = "line-through";
-      } else {
-        iconI.classList.add("fa-regular", "fa-circle");
-      }
-      todoTextSpan.textContent = todo.todoText;
-      todoListItemLi.appendChild(iconI);
-      todoListItemLi.appendChild(document.createTextNode("\u00A0"));
-      todoListItemLi.appendChild(todoTextSpan);
-      this.todoListUl.appendChild(todoListItemLi);
-    });
   };
 }
 
