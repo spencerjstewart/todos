@@ -37,18 +37,25 @@ class TodoListUI {
   handleTodoItemTextBlur = (e) => {
     e.target.contentEditable = false;
     e.target.removeEventListener("blur", this.handleTodoItemTextBlur);
-    this.todoList.edit(
-      parseInt(e.target.closest(".todo-item").dataset.index, 10),
-      e.target.textContent,
-    );
+    const text = e.target.textContent.trim();
+    if (text === "") {
+      this.displayTodos();
+    } else {
+      this.todoList.edit(
+        parseInt(e.target.closest(".todo-item").dataset.index, 10),
+        text,
+      );
+    }
   };
 
   handleTodoItemTextEnter = (e) => {
     e.target.contentEditable = false;
-    this.todoList.edit(
-      e.target.closest(".todo-item").dataset.index,
-      e.target.textContent,
-    );
+    const text = e.target.textContent.trim();
+    if (text === "") {
+      this.displayTodos();
+    } else {
+      this.todoList.edit(e.target.closest(".todo-item").dataset.index, text);
+    }
   };
 
   displayTodos = () => {
