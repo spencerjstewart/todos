@@ -1,3 +1,10 @@
+## [2.2.2](https://github.com/spencerjstewart/practical-javascript/compare/v2.2.1...v2.2.2) (2024-03-13)
+
+
+### Bug Fixes
+
+* add blur event listener on the todo text span element ([#37](https://github.com/spencerjstewart/practical-javascript/issues/37)) ([615f624](https://github.com/spencerjstewart/practical-javascript/commit/615f624d02cceac1749268bf2bbd6ee9d7669c37))
+
 ## [2.2.1](https://github.com/spencerjstewart/practical-javascript/compare/v2.2.0...v2.2.1) (2024-03-13)
 
 
