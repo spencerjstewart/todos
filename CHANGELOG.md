@@ -1,3 +1,10 @@
+# [2.6.0](https://github.com/spencerjstewart/practical-javascript/compare/v2.5.0...v2.6.0) (2024-03-13)
+
+
+### Features
+
+* don't allow todo text to be an empty string when editing a todo ([#43](https://github.com/spencerjstewart/practical-javascript/issues/43)) ([422ea18](https://github.com/spencerjstewart/practical-javascript/commit/422ea18e13b3030691b38fa87809e74729e70e27))
+
 # [2.5.0](https://github.com/spencerjstewart/practical-javascript/compare/v2.4.0...v2.5.0) (2024-03-13)
 
 
