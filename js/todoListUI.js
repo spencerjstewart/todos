@@ -131,6 +131,15 @@ class TodoListUI {
       }
     });
 
+    // handling toggling todos
+    this.todoListUl.addEventListener("click", (e) => {
+      if (e.target.classList.contains("todo-item__completed-icon")) {
+        this.todoList.toggle(
+          parseInt(e.target.closest(".todo-item").dataset.index, 10),
+        );
+      }
+    });
+
     // display todolist
     this.displayTodos();
   };
