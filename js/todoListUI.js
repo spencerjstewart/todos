@@ -66,14 +66,13 @@ class TodoListUI {
       todoListItemLi.classList.add("todo-item", "list-group-item");
       todoListItemLi.setAttribute("data-index", index);
 
-      // create the completed icon
-      const completedIconI = document.createElement("i");
-      completedIconI.classList.add("todo-item__completed-icon", "fa");
-      completedIconI.classList.add(
-        "fa",
-        todo.completed ? "fa-check-circle" : "fa-circle",
+      // create the completed checkbox
+      const todoItemToggleCompletedCheckbox = document.createElement("input");
+      todoItemToggleCompletedCheckbox.type = "checkbox";
+      todoItemToggleCompletedCheckbox.classList.add(
+        "todo-item__toggle-completed",
       );
-      todoListItemLi.appendChild(completedIconI);
+      todoListItemLi.appendChild(todoItemToggleCompletedCheckbox);
 
       // add a space
       todoListItemLi.appendChild(document.createTextNode("\u00A0"));
