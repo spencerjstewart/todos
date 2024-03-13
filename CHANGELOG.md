@@ -1,3 +1,10 @@
+# [2.5.0](https://github.com/spencerjstewart/practical-javascript/compare/v2.4.0...v2.5.0) (2024-03-13)
+
+
+### Features
+
+* add event listener for toggling individual todos ([#42](https://github.com/spencerjstewart/practical-javascript/issues/42)) ([763341e](https://github.com/spencerjstewart/practical-javascript/commit/763341ecb5123b5be0c0078687c759f2bf9b5f96))
+
 # [2.4.0](https://github.com/spencerjstewart/practical-javascript/compare/v2.3.0...v2.4.0) (2024-03-13)
 
 
