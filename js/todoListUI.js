@@ -26,10 +26,11 @@ class TodoListUI {
 
   displayTodos = () => {
     this.todoListUl.innerHTML = "";
-    this.todoList.todos.forEach((todo) => {
+    this.todoList.todos.forEach((todo, index) => {
       // create the li
       const todoListItemLi = document.createElement("li");
       todoListItemLi.classList.add("todo-item", "list-group-item");
+      todoListItemLi.setAttribute("data-index", index);
 
       // create the completed icon
       const completedIconI = document.createElement("i");
@@ -69,11 +70,15 @@ class TodoListUI {
     this.displayTodosBtn.addEventListener("click", () =>
       this.handleDisplayTodosBtnClick(),
     );
+
+    // handle adding todos
     this.todoInput.addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
         this.handleAddTodo();
       }
     });
+
+    // handle editing todos
     this.todoListUl.addEventListener("click", (e) => {
       if (e.target.classList.contains("todo-item__edit-icon")) {
         e.stopPropagation();
@@ -82,6 +87,15 @@ class TodoListUI {
     });
     this.todoListUl.addEventListener("blur", (e) => {
       if (e.target.classList.contains("todo-item__text")) {
+        e.target.contentEditable = false;
+        this.todoList.edit(
+          e.target.closest(".todo-item").dataset.index,
+          e.target.textContent,
+        );
+      }
+    });
+    this.todoListUl.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" && e.target.classList.contains("todo-item__text")) {
         e.target.contentEditable = false;
         this.todoList.edit(
           e.target.closest(".todo-item").dataset.index,
