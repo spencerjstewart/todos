@@ -1,3 +1,10 @@
+# [2.4.0](https://github.com/spencerjstewart/practical-javascript/compare/v2.3.0...v2.4.0) (2024-03-13)
+
+
+### Features
+
+* add ability to remove a todo ([#40](https://github.com/spencerjstewart/practical-javascript/issues/40)) ([84905fa](https://github.com/spencerjstewart/practical-javascript/commit/84905fadca4e2bbb936f9189744947455fb9fd68))
+
 # [2.3.0](https://github.com/spencerjstewart/practical-javascript/compare/v2.2.2...v2.3.0) (2024-03-13)
 
 
