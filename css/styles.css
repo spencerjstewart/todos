@@ -77,3 +77,28 @@ body {
   transform: scale(1.2);
   cursor: pointer;
 }
+
+.todo-item__toggle-completed {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-dark-shade);
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  position: relative;
+}
+
+.todo-item__toggle-completed:checked {
+  background-color: var(--color-light-accent);
+  border-color: var(--color-light-accent);
+}
+
+.todo-item__toggle-completed:checked::after {
+  content: "\2713";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-main);
+  font-size: 14px;
+}
