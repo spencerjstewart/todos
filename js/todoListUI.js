@@ -22,12 +22,15 @@ class TodoListUI {
       .querySelector(".todo-item__text");
     todoTextSpan.contentEditable = true;
     todoTextSpan.focus();
+
+    todoTextSpan.addEventListener("blur", this.handleTodoItemTextBlur);
   };
 
   handleTodoItemTextBlur = (e) => {
     e.target.contentEditable = false;
+    e.target.removeEventListener("blur", this.handleTodoItemTextBlur);
     this.todoList.edit(
-      e.target.closest(".todo-item").dataset.index,
+      parseInt(e.target.closest(".todo-item").dataset.index, 10),
       e.target.textContent,
     );
   };
@@ -82,11 +85,6 @@ class TodoListUI {
     // setup observers
     this.todoList.subscribe(this.displayTodos);
 
-    // setup event listeners
-    this.displayTodosBtn.addEventListener("click", () =>
-      this.handleDisplayTodosBtnClick(),
-    );
-
     // handle adding todos
     this.todoInput.addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
@@ -101,14 +99,8 @@ class TodoListUI {
         this.handleEditTodoIconClick(e);
       }
     });
-    this.todoListUl.addEventListener("blur", (e) => {
-      if (e.target.classList.contains("todo-item__text")) {
-        this.handleTodoItemTextBlur(e);
-      }
-    });
     this.todoListUl.addEventListener("keydown", (e) => {
       if (e.key === "Enter" && e.target.classList.contains("todo-item__text")) {
-        e.stopPropagation();
         this.handleTodoItemTextEnter(e);
       }
     });
