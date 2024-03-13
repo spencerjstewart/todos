@@ -23,6 +23,14 @@ class TodoListUI {
     todoTextSpan.contentEditable = true;
     todoTextSpan.focus();
 
+    // Move the cursor to the end of the text content
+    const range = document.createRange();
+    range.selectNodeContents(todoTextSpan);
+    range.collapse(false);
+    const selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+
     todoTextSpan.addEventListener("blur", this.handleTodoItemTextBlur);
   };
 
