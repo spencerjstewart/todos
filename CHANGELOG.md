@@ -1,3 +1,10 @@
+## [2.2.1](https://github.com/spencerjstewart/practical-javascript/compare/v2.2.0...v2.2.1) (2024-03-13)
+
+
+### Bug Fixes
+
+* set the index attribute for each todo item so editing will work ([#34](https://github.com/spencerjstewart/practical-javascript/issues/34)) ([c55df85](https://github.com/spencerjstewart/practical-javascript/commit/c55df85befa1623bd3a8e5067e4e125e670feb00))
+
 # [2.2.0](https://github.com/spencerjstewart/practical-javascript/compare/v2.1.0...v2.2.0) (2024-03-12)
 
 
