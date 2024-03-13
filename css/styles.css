@@ -67,3 +67,13 @@ body {
   transform: scale(1.2);
   cursor: pointer;
 }
+
+.todo-item__remove-icon {
+  margin-left: 0.5rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.todo-item__remove-icon:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}

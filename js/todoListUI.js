@@ -85,6 +85,15 @@ class TodoListUI {
       editIconI.classList.add("todo-item__edit-icon", "fa-solid", "fa-pen");
       todoListItemLi.appendChild(editIconI);
 
+      // create the remove icon
+      const removeIconI = document.createElement("i");
+      removeIconI.classList.add(
+        "todo-item__remove-icon",
+        "fa-solid",
+        "fa-trash",
+      );
+      todoListItemLi.appendChild(removeIconI);
+
       this.todoListUl.appendChild(todoListItemLi);
     });
   };
@@ -110,6 +119,15 @@ class TodoListUI {
     this.todoListUl.addEventListener("keydown", (e) => {
       if (e.key === "Enter" && e.target.classList.contains("todo-item__text")) {
         this.handleTodoItemTextEnter(e);
+      }
+    });
+
+    // handle removing todos
+    this.todoListUl.addEventListener("click", (e) => {
+      if (e.target.classList.contains("todo-item__remove-icon")) {
+        this.todoList.remove(
+          parseInt(e.target.closest(".todo-item").dataset.index, 10),
+        );
       }
     });
 
