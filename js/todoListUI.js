@@ -72,6 +72,7 @@ class TodoListUI {
       todoItemToggleCompletedCheckbox.classList.add(
         "todo-item__toggle-completed",
       );
+      todoItemToggleCompletedCheckbox.checked = !!todo.completed;
       todoListItemLi.appendChild(todoItemToggleCompletedCheckbox);
 
       // add a space
@@ -139,7 +140,7 @@ class TodoListUI {
 
     // handling toggling todos
     this.todoListUl.addEventListener("click", (e) => {
-      if (e.target.classList.contains("todo-item__completed-icon")) {
+      if (e.target.classList.contains("todo-item__toggle-completed")) {
         this.todoList.toggle(
           parseInt(e.target.closest(".todo-item").dataset.index, 10),
         );
