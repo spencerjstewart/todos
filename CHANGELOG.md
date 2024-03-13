@@ -1,3 +1,10 @@
+## [2.6.1](https://github.com/spencerjstewart/practical-javascript/compare/v2.6.0...v2.6.1) (2024-03-13)
+
+
+### Bug Fixes
+
+* use correct class in toggle listener and add checked attribute if todo is completed ([#45](https://github.com/spencerjstewart/practical-javascript/issues/45)) ([f083ffe](https://github.com/spencerjstewart/practical-javascript/commit/f083ffe547c94b0aa36d173caea32515fa220384))
+
 # [2.6.0](https://github.com/spencerjstewart/practical-javascript/compare/v2.5.0...v2.6.0) (2024-03-13)
 
 
