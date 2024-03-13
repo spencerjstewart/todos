@@ -19,6 +19,16 @@ This is a simple Todo List application built as part of the Practical JavaScript
 - Babel
 - Jest
 
+## Commit Message Conventions
+
+This project uses the [AngularJS commit message conventions](https://docs.google.
+com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#heading=h.uyo6cb12dt6w) for 
+commit messages. <scope> is optional in the message header. The message body and footer are 
+optional.
+
+Following this convention allows for an easy-to-read and consistent commit history, as well as 
+allowing for automatic versioning and changelog generation with semantic-release.  
+
 ## Getting Started
 
 To get started with the Todo List application, follow these steps:

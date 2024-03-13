@@ -24,6 +24,22 @@ class TodoListUI {
     todoTextSpan.focus();
   };
 
+  handleTodoItemTextBlur = (e) => {
+    e.target.contentEditable = false;
+    this.todoList.edit(
+      e.target.closest(".todo-item").dataset.index,
+      e.target.textContent,
+    );
+  };
+
+  handleTodoItemTextEnter = (e) => {
+    e.target.contentEditable = false;
+    this.todoList.edit(
+      e.target.closest(".todo-item").dataset.index,
+      e.target.textContent,
+    );
+  };
+
   displayTodos = () => {
     this.todoListUl.innerHTML = "";
     this.todoList.todos.forEach((todo, index) => {
@@ -87,20 +103,13 @@ class TodoListUI {
     });
     this.todoListUl.addEventListener("blur", (e) => {
       if (e.target.classList.contains("todo-item__text")) {
-        e.target.contentEditable = false;
-        this.todoList.edit(
-          e.target.closest(".todo-item").dataset.index,
-          e.target.textContent,
-        );
+        this.handleTodoItemTextBlur(e);
       }
     });
     this.todoListUl.addEventListener("keydown", (e) => {
       if (e.key === "Enter" && e.target.classList.contains("todo-item__text")) {
-        e.target.contentEditable = false;
-        this.todoList.edit(
-          e.target.closest(".todo-item").dataset.index,
-          e.target.textContent,
-        );
+        e.stopPropagation();
+        this.handleTodoItemTextEnter(e);
       }
     });
 
