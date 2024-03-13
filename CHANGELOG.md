@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/spencerjstewart/practical-javascript/compare/v2.2.2...v2.3.0) (2024-03-13)
+
+
+### Features
+
+* move cursor to the end of the text content of a todo when editing ([#38](https://github.com/spencerjstewart/practical-javascript/issues/38)) ([a85885f](https://github.com/spencerjstewart/practical-javascript/commit/a85885f058a7885204ce11ead2152d34b1565ee3))
+
 ## [2.2.2](https://github.com/spencerjstewart/practical-javascript/compare/v2.2.1...v2.2.2) (2024-03-13)
 
 
