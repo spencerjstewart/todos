@@ -102,3 +102,8 @@ body {
   color: var(--color-main);
   font-size: 14px;
 }
+
+.todo-card__toggle-all {
+  width: 8rem;
+  margin: auto;
+}
