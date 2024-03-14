@@ -1,3 +1,10 @@
+## [2.7.1](https://github.com/spencerjstewart/practical-javascript/compare/v2.7.0...v2.7.1) (2024-03-14)
+
+
+### Bug Fixes
+
+* make toggleAll work if there are no completed todos ([#48](https://github.com/spencerjstewart/practical-javascript/issues/48)) ([655d2f7](https://github.com/spencerjstewart/practical-javascript/commit/655d2f735a24b340c01e2ef9ca62ba4e909e15f9))
+
 # [2.7.0](https://github.com/spencerjstewart/practical-javascript/compare/v2.6.1...v2.7.0) (2024-03-14)
 
 
