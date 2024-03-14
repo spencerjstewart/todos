@@ -5,6 +5,7 @@ class TodoListUI {
     this.displayTodosBtn = document.querySelector(".display-todos-btn");
     this.todoInput = document.querySelector(".todo-input");
     this.todoListUl = document.querySelector(".todo-list");
+    this.toggleAllBtn = document.querySelector(".todo-card__toggle-all");
   }
 
   handleDisplayTodosBtnClick = () => {
@@ -144,6 +145,13 @@ class TodoListUI {
         this.todoList.toggle(
           parseInt(e.target.closest(".todo-item").dataset.index, 10),
         );
+      }
+    });
+
+    // handling toggling all todos
+    this.toggleAllBtn.addEventListener("click", (e) => {
+      if (e.target.classList.contains("todo-card__toggle-all")) {
+        this.todoList.toggleAll();
       }
     });
 
