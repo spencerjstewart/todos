@@ -2,15 +2,10 @@ class TodoListUI {
   // takes an instance of TodoList
   constructor(todoList) {
     this.todoList = todoList;
-    this.displayTodosBtn = document.querySelector(".display-todos-btn");
     this.todoInput = document.querySelector(".todo-input");
     this.todoListUl = document.querySelector(".todo-list");
     this.toggleAllBtn = document.querySelector(".todo-card__toggle-all");
   }
-
-  handleDisplayTodosBtnClick = () => {
-    this.displayTodos();
-  };
 
   handleAddTodo = () => {
     this.todoList.add(this.todoInput.value);
