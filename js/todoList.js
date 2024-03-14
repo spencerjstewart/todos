@@ -57,7 +57,7 @@ class TodoList {
       }
     });
 
-    if (numTrue > 0 && numTrue !== this.todos.length) {
+    if (numTrue >= 0 && numTrue !== this.todos.length) {
       this.todos.forEach((todo) => {
         todo.completed = true;
       });
