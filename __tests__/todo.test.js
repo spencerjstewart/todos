@@ -37,10 +37,9 @@ describe("Todo App", () => {
           placeholder="What needs to be done?"
           type="text"
         />
+        <hr>
+        <button class="todo-card__toggle-all btn btn-light">Toggle All</button>
         <article class="todo-card__body card-body">
-          <button class="display-todos-btn btn btn-success">
-            Display Todos
-          </button>
           <ul class="todo-list list-group list-group-flush"></ul>
         </article>
       </section>
