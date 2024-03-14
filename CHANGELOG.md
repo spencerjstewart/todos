@@ -1,3 +1,10 @@
+# [2.7.0](https://github.com/spencerjstewart/practical-javascript/compare/v2.6.1...v2.7.0) (2024-03-14)
+
+
+### Features
+
+* add button to toggle all todos ([#46](https://github.com/spencerjstewart/practical-javascript/issues/46)) ([9ea5f83](https://github.com/spencerjstewart/practical-javascript/commit/9ea5f831a6310b10fb7d53ee04ba449dfb2e64ea))
+
 ## [2.6.1](https://github.com/spencerjstewart/practical-javascript/compare/v2.6.0...v2.6.1) (2024-03-13)
 
 
