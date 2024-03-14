@@ -4,11 +4,33 @@ This is a simple Todo List application built as part of the Practical JavaScript
 
 ## Features
 
-- Add new todo items
-- Edit existing todo items
-- Remove todo items
-- Toggle the completed status of individual todo items
-- Toggle the completed status of all todo items at once
+- ✅ Add new todo items
+- ✅ Edit existing todo items
+- ✅ Remove todo items
+- ✅ Toggle the completed status of individual todo items
+- ✅ Toggle the completed status of all todo items at once
+- ❌ View todo items by completed status
+
+## Upcoming Features
+
+### Version 3
+
+- Use Express to serve the application
+- Use MongoDB to persist todo items
+- Search bar to filter todos
+- Tags to categorize todos
+- Due dates for todos
+- Estimated time and/or effort for todos
+
+### Version 4
+
+- Add user authentication
+- Allow users to create and manage their own todo lists
+
+### Version 5
+
+- Allow users to create multiple todo lists
+- Create Kanban template so users can use a simple todo list or a Kanban layout
 
 ## Technologies Used
 
