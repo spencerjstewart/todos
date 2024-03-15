@@ -142,3 +142,31 @@ body {
   transform: translateY(-0.1rem);
   box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.2);
 }
+
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.nav-item {
+  margin: 0 0.5rem;
+}
+
+.nav-item>a:hover {
+  transform: translateY(-0.1rem);
+  cursor: pointer;
+  color: var(--color-main);
+  background-color: var(--color-dark-accent);
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+}
+
+.nav-item>a:active {
+  transform: translateY(0.05rem);
+  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+}
+
+.nav-item>a.active {
+  border-bottom: 0.2rem solid var(--color-dark-shade);
+  transform: translateY(-0.1rem);
+}
