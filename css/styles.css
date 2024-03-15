@@ -132,4 +132,13 @@ body {
 .todo-input {
   margin: 0.5rem auto 0.5rem;
   width: 75%;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.todo-input:focus {
+  outline: none;
+  border: 0.1rem solid var(--color-light-accent);
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.2);
 }
