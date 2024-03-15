@@ -19,6 +19,17 @@
       <section class="todo-card card">
         <header class="todo-card__header card-header">
           <h1>todos</h1>
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" data-filter="all" href="#">All</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-filter="incomplete" href="#">In Progress</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-filter="completed" href="#">Completed</a>
+            </li>
+          </ul>
         </header>
         <article class="todo-card__body card-body">
           <ul class="todo-list list-group list-group-flush"></ul>
