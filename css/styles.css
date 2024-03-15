@@ -19,7 +19,7 @@ body {
   max-width: 24rem;
   min-width: 18rem;
   border: 0.1rem solid var(--color-dark-shade);
-  box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.8rem 1.2rem rgba(0, 0, 0, 0.3);
 }
 
 .todo-card__header {
@@ -34,12 +34,7 @@ body {
   font-size: 3rem;
   font-family: "Poppins", sans-serif;
   font-style: italic;
-  text-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.1);
-}
-
-.todo-input {
-  margin: 1rem auto 0;
-  width: 75%;
+  text-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
 }
 
 .display-todos-btn {
@@ -69,7 +64,7 @@ body {
 }
 
 .todo-item__remove-icon {
-  margin-left: 0.5rem;
+  margin-left: 0.7rem;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -80,9 +75,9 @@ body {
 
 .todo-item__toggle-completed {
   appearance: none;
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--color-dark-shade);
+  min-width: 1.25rem;
+  height: 1.25rem;
+  border: 0.1rem solid var(--color-dark-shade);
   border-radius: 50%;
   margin-right: 0.5rem;
   position: relative;
@@ -105,5 +100,19 @@ body {
 
 .todo-card__toggle-all {
   width: 8rem;
-  margin: auto;
+  margin: 0 auto 1rem;
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-top: 0.1rem solid var(--color-dark-shade);
+}
+
+.todo-input {
+  margin: 0.5rem auto 0.5rem;
+  width: 75%;
 }

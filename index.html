@@ -20,18 +20,19 @@
         <header class="todo-card__header card-header">
           <h1>todos</h1>
         </header>
-        <label class="visually-hidden" for="todo-input">"What needs to be done?"</label>
-        <input
-          class="todo-input form-control"
-          id="todo-input"
-          placeholder="What needs to be done?"
-          type="text"
-        />
-        <hr>
-        <button class="todo-card__toggle-all btn btn-light">Toggle All</button>
         <article class="todo-card__body card-body">
           <ul class="todo-list list-group list-group-flush"></ul>
         </article>
+        <button class="todo-card__toggle-all btn btn-success">Toggle All</button>
+        <footer class="card-footer">
+          <label class="visually-hidden" for="todo-input">"What needs to be done?"</label>
+          <input
+            class="todo-input form-control"
+            id="todo-input"
+            placeholder="What needs to be done?"
+            type="text"
+          />
+        </footer>
       </section>
     </div>
   </body>
