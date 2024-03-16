@@ -1,3 +1,10 @@
+# [2.8.0](https://github.com/spencerjstewart/practical-javascript/compare/v2.7.1...v2.8.0) (2024-03-16)
+
+
+### Features
+
+* implement filtering todos by status with nav tabs ([#53](https://github.com/spencerjstewart/practical-javascript/issues/53)) ([a733107](https://github.com/spencerjstewart/practical-javascript/commit/a7331077e053a9e44353603fd0a4ba780c7c1784))
+
 ## [2.7.1](https://github.com/spencerjstewart/practical-javascript/compare/v2.7.0...v2.7.1) (2024-03-14)
 
 
