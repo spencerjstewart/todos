@@ -9,7 +9,7 @@ This is a simple Todo List application built as part of the Practical JavaScript
 - ✅ Remove todo items
 - ✅ Toggle the completed status of individual todo items
 - ✅ Toggle the completed status of all todo items at once
-- ❌ View todo items by completed status
+- ✅ View todo items by completed status
 
 ## Upcoming Features
 
