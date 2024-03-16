@@ -25,25 +25,37 @@ describe("Todo App", () => {
 
     beforeEach(() => {
       document.body.innerHTML = `
-    <div class="container">
-      <section class="todo-card card">
-        <header class="todo-card__header card-header">
-          <h1>todos</h1>
-        </header>
-        <label class="visually-hidden" for="todo-input">"What needs to be done?"</label>
-        <input
-          class="todo-input form-control"
-          id="todo-input"
-          placeholder="What needs to be done?"
-          type="text"
-        />
-        <hr>
-        <button class="todo-card__toggle-all btn btn-light">Toggle All</button>
-        <article class="todo-card__body card-body">
-          <ul class="todo-list list-group list-group-flush"></ul>
-        </article>
-      </section>
-    </div>
+        <div class="container">
+          <section class="todo-card card">
+            <header class="todo-card__header card-header">
+              <h1>todos</h1>
+              <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" data-filter="all" href="#">All</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-filter="incomplete" href="#">In Progress</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-filter="completed" href="#">Completed</a>
+                </li>
+              </ul>
+            </header>
+            <article class="todo-card__body card-body">
+              <ul class="todo-list list-group list-group-flush"></ul>
+            </article>
+            <button class="todo-card__toggle-all btn btn-success">Toggle All</button>
+            <footer class="card-footer">
+              <label class="visually-hidden" for="todo-input">"What needs to be done?"</label>
+              <input
+                class="todo-input form-control"
+                id="todo-input"
+                placeholder="What needs to be done?"
+                type="text"
+              />
+            </footer>
+          </section>
+        </div>
       `;
       todoList = initTodos();
       ui = new TodoListUI(todoList);
