@@ -5,7 +5,22 @@ class TodoListUI {
     this.todoInput = document.querySelector(".todo-input");
     this.todoListUl = document.querySelector(".todo-list");
     this.toggleAllBtn = document.querySelector(".todo-card__toggle-all");
+    this.navTabs = document.querySelector(".nav-tabs");
   }
+
+  handleNavItemClick = (e) => {
+    let navLink;
+    if (e.target.classList.contains("nav-link")) {
+      navLink = e.target;
+      this.displayTodos(navLink.dataset.filter);
+      // remove the active class from all nav items
+      this.navTabs.querySelectorAll(".nav-link").forEach((item) => {
+        item.classList.remove("active");
+      });
+      // add the active class to the <a> child element of the clicked nav item
+      navLink.classList.add("active");
+    }
+  };
 
   handleAddTodo = () => {
     this.todoList.add(this.todoInput.value);
@@ -54,56 +69,77 @@ class TodoListUI {
     }
   };
 
-  displayTodos = () => {
+  /**
+   * @param filter {string} - "all", "incomplete", "completed"
+   */
+  displayTodos = (filter) => {
     this.todoListUl.innerHTML = "";
-    this.todoList.todos.forEach((todo, index) => {
-      // create the li
-      const todoListItemLi = document.createElement("li");
-      todoListItemLi.classList.add("todo-item", "list-group-item");
-      todoListItemLi.setAttribute("data-index", index);
 
-      // create the completed checkbox
-      const todoItemToggleCompletedCheckbox = document.createElement("input");
-      todoItemToggleCompletedCheckbox.type = "checkbox";
-      todoItemToggleCompletedCheckbox.classList.add(
-        "todo-item__toggle-completed",
-      );
-      todoItemToggleCompletedCheckbox.checked = !!todo.completed;
-      todoListItemLi.appendChild(todoItemToggleCompletedCheckbox);
+    this.todoList.todos
+      .filter((todo) => {
+        if (filter === "incomplete") {
+          return !todo.completed;
+        }
+        if (filter === "completed") {
+          return todo.completed;
+        }
+        return true;
+      })
+      .forEach((todo, index) => {
+        // create the li
+        const todoListItemLi = document.createElement("li");
+        todoListItemLi.classList.add("todo-item", "list-group-item");
+        todoListItemLi.setAttribute("data-index", index);
 
-      // add a space
-      todoListItemLi.appendChild(document.createTextNode("\u00A0"));
+        // create the completed checkbox
+        const todoItemToggleCompletedCheckbox = document.createElement("input");
+        todoItemToggleCompletedCheckbox.type = "checkbox";
+        todoItemToggleCompletedCheckbox.classList.add(
+          "todo-item__toggle-completed",
+        );
+        todoItemToggleCompletedCheckbox.checked = !!todo.completed;
+        todoListItemLi.appendChild(todoItemToggleCompletedCheckbox);
 
-      // create the todo text
-      const todoTextSpan = document.createElement("span");
-      todoTextSpan.classList.add("todo-item__text");
-      todoTextSpan.style.textDecoration = todo.completed
-        ? "line-through"
-        : "none";
-      todoTextSpan.textContent = todo.todoText;
-      todoListItemLi.appendChild(todoTextSpan);
+        // add a space
+        todoListItemLi.appendChild(document.createTextNode("\u00A0"));
 
-      // create the edit icon
-      const editIconI = document.createElement("i");
-      editIconI.classList.add("todo-item__edit-icon", "fa-solid", "fa-pen");
-      todoListItemLi.appendChild(editIconI);
+        // create the todo text
+        const todoTextSpan = document.createElement("span");
+        todoTextSpan.classList.add("todo-item__text");
+        todoTextSpan.style.textDecoration = todo.completed
+          ? "line-through"
+          : "none";
+        todoTextSpan.textContent = todo.todoText;
+        todoListItemLi.appendChild(todoTextSpan);
 
-      // create the remove icon
-      const removeIconI = document.createElement("i");
-      removeIconI.classList.add(
-        "todo-item__remove-icon",
-        "fa-solid",
-        "fa-trash",
-      );
-      todoListItemLi.appendChild(removeIconI);
+        // create the edit icon
+        const editIconI = document.createElement("i");
+        editIconI.classList.add("todo-item__edit-icon", "fa-solid", "fa-pen");
+        todoListItemLi.appendChild(editIconI);
 
-      this.todoListUl.appendChild(todoListItemLi);
-    });
+        // create the remove icon
+        const removeIconI = document.createElement("i");
+        removeIconI.classList.add(
+          "todo-item__remove-icon",
+          "fa-solid",
+          "fa-trash",
+        );
+        todoListItemLi.appendChild(removeIconI);
+
+        this.todoListUl.appendChild(todoListItemLi);
+      });
   };
 
   init = () => {
     // setup observers
     this.todoList.subscribe(this.displayTodos);
+
+    // handle nav tab clicks
+    this.navTabs.addEventListener("click", (e) => {
+      if (e.target.classList.contains("nav-link")) {
+        this.handleNavItemClick(e);
+      }
+    });
 
     // handle adding todos
     this.todoInput.addEventListener("keydown", (e) => {
