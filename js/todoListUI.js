@@ -12,14 +12,14 @@ class TodoListUI {
     let navLink;
     if (e.target.classList.contains("nav-link")) {
       navLink = e.target;
-      this.displayTodos(navLink.dataset.filter);
       // remove the active class from all nav items
       this.navTabs.querySelectorAll(".nav-link").forEach((item) => {
         item.classList.remove("active");
       });
-      // add the active class to the <a> child element of the clicked nav item
+      // add the active class to the clicked nav link
       navLink.classList.add("active");
     }
+    this.displayTodos();
   };
 
   handleAddTodo = () => {
@@ -69,12 +69,9 @@ class TodoListUI {
     }
   };
 
-  /**
-   * @param filter {string} - "all", "incomplete", "completed"
-   */
-  displayTodos = (filter) => {
+  displayTodos = () => {
     this.todoListUl.innerHTML = "";
-
+    const filter = this.navTabs.querySelector(".active").dataset.filter;
     this.todoList.todos
       .filter((todo) => {
         if (filter === "incomplete") {
