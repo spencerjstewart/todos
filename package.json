@@ -1,7 +1,7 @@
 {
-  "name": "practical-javascript",
+  "name": "todos",
   "version": "1.0.0",
-  "description": "Todo List App for the Practical JavaScript course on Watch and Code",
+  "description": "Todo list app for the Practical JavaScript course on Watch and Code",
   "main": "js/index.js",
   "scripts": {
     "start-dev": "webpack-dev-server",
