@@ -1,14 +1,27 @@
 const express = require("express");
-const path = require("path");
+const webpack = require("webpack");
+const webpackDevMiddleware = require("webpack-dev-middleware");
+const webpackHotMiddleware = require("webpack-hot-middleware");
+const webpackConfig = require("./webpack.config");
+const { join } = require("path");
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(express.static(path.join(__dirname, "dist")));
+if (process.env.NODE_ENV === "development") {
+  const compiler = webpack(webpackConfig);
+  app.use(
+    webpackDevMiddleware(compiler, {
+      publicPath: webpackConfig.output.publicPath,
+    }),
+  );
+  app.use(webpackHotMiddleware(compiler));
+}
 
-// Serve the index.html file for all routes
+app.use(express.static("dist"));
+
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "dist", "index.html"));
+  res.sendFile(join(__dirname, "dist", "index.html"));
 });
 
 app.listen(port, () => {

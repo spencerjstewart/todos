@@ -7,6 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
+    publicPath: "/",
   },
   mode: "development",
   devServer: {
@@ -14,7 +15,9 @@ module.exports = {
       directory: path.join(__dirname, "dist"),
     },
     open: true,
-    port: 8080,
+    port: 3000,
+    hot: true,
+    watchFiles: ["./index.html"],
   },
   module: {
     rules: [
