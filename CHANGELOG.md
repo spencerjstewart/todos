@@ -1,3 +1,10 @@
+# [2.9.0](https://github.com/spencerjstewart/todos/compare/v2.8.0...v2.9.0) (2024-04-10)
+
+
+### Features
+
+* add express and configure a basic server.js to serve the app ([#57](https://github.com/spencerjstewart/todos/issues/57)) ([cc8f881](https://github.com/spencerjstewart/todos/commit/cc8f8816f7b1c30e36743380441752dbd7b78d67))
+
 # [2.8.0](https://github.com/spencerjstewart/practical-javascript/compare/v2.7.1...v2.8.0) (2024-03-16)
 
 
