@@ -1,3 +1,10 @@
+# [2.10.0](https://github.com/spencerjstewart/todos/compare/v2.9.0...v2.10.0) (2024-04-10)
+
+
+### Features
+
+* create development environment using express ([#58](https://github.com/spencerjstewart/todos/issues/58)) ([610439f](https://github.com/spencerjstewart/todos/commit/610439f06fef7e15785d52ee71399e68c58f9176))
+
 # [2.9.0](https://github.com/spencerjstewart/todos/compare/v2.8.0...v2.9.0) (2024-04-10)
 
 
