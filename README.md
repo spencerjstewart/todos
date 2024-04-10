@@ -1,6 +1,7 @@
 # Todos
 
-This is a simple Todo List application built as part of the Practical JavaScript course at [Watch and Code](https://watchandcode.com/). The application allows you to create, read, update, and delete todo items, as well as mark them as completed.
+This is a simple todo list application built as part of the Practical JavaScript course at [Watch 
+and Code](https://watchandcode.com/). The application allows you to create, read, update, and delete todo items, as well as mark them as completed.
 
 ## Features
 
