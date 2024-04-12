@@ -17,7 +17,10 @@ module.exports = {
     open: true,
     port: 3000,
     hot: true,
-    watchFiles: ["./index.html"],
+    watchFiles: ["./**/*"],
+    headers: {
+      "Cache-Control": "no-cache",
+    },
   },
   module: {
     rules: [

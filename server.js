@@ -8,16 +8,6 @@ const { join } = require("path");
 const app = express();
 const port = process.env.PORT || 3000;
 
-if (process.env.NODE_ENV === "development") {
-  const compiler = webpack(webpackConfig);
-  app.use(
-    webpackDevMiddleware(compiler, {
-      publicPath: webpackConfig.output.publicPath,
-    }),
-  );
-  app.use(webpackHotMiddleware(compiler));
-}
-
 app.use(express.static("dist"));
 
 app.get("*", (req, res) => {

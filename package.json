@@ -5,10 +5,10 @@
   "main": "js/index.js",
   "scripts": {
     "start": "node server.js",
-    "start-dev": "cross-env NODE_ENV=development node server.js",
+    "start-dev": "webpack serve --mode development",
     "release": "semantic-release",
     "test": "jest",
-    "build": "webpack"
+    "build": "webpack --mode production"
   },
   "jest": {
     "testEnvironment": "jsdom"
