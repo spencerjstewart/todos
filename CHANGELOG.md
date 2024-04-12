@@ -1,3 +1,10 @@
+## [2.10.1](https://github.com/spencerjstewart/todos/compare/v2.10.0...v2.10.1) (2024-04-12)
+
+
+### Bug Fixes
+
+* reconfigure webpack to automatically refresh browser on file change ([#59](https://github.com/spencerjstewart/todos/issues/59)) ([9a1d501](https://github.com/spencerjstewart/todos/commit/9a1d5017b560876ae8731075e3d6735f53f41099))
+
 # [2.10.0](https://github.com/spencerjstewart/todos/compare/v2.9.0...v2.10.0) (2024-04-10)
 
 
